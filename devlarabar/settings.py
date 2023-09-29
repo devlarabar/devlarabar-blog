@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-uqcu9(v3=dg9!q+=ivkiajxbk9@1q=ijwto)zdx0nky!g%$!n3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['devlarabar-blog.vercel.app']
 
 
 # Application definition
