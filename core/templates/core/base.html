@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<noscript>
+    <div id="nojs">
+        <h1>Please Enable JavaScript</h1>
+        <meta http-equiv="refresh" content="0; url =/help/rules/?nojs=True">
+    </div>
+</noscript>
+
+<head>
+    {% if not title %}
+    <title>Devlarabar</title>
+    {% else %}
+    <title>Devlarabar - {{ title }}</title>
+    {% endif %}
+
+    <meta name="viewport" content="width=viewport, user-scalable=yes">
+
+    <!-- <style>
+        :root {
+            --bgcolor: {{ css_variables.bgcolor }};
+            --color: {{ css_variables.color }};
+            --link_color: {{ css_variables.link_color }};
+            --hover_color: {{ css_variables.hover_color }};
+            --grid_head: {{ css_variables.grid_head }};
+            --grid_select: {{ css_variables.grid_select }};
+            --grid_odd: {{ css_variables.grid_odd }};
+            --grid_even: {{ css_variables.grid_even }};
+        }
+        </style> -->
+
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+            Hello
+        </header>
+
+        <main>
+            {% block world_top_menu %}{% endblock %}
+            {% block market_menu %}{% endblock %}
+            {% block cssguide_top %}{% endblock %}
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <p>
+                Copyright 2023 - Lara Alexander
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
