@@ -30,7 +30,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['devlarabar-blog.vercel.app']
+ALLOWED_HOSTS = ['devlarabar-blog.vercel.app', 'localhost']
 
 
 # Application definition

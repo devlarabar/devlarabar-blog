@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<section>
+    <h2>Login</h2>
+
+    {% if logged_in %}
+
+    <p>Hi there, {{ username }}! Looks like you're already logged in! <a href="/">Click here</a> to return to the home
+        page.</p>
+
+    {% else %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {% for field in form.visible_fields %}
+            <span>{{ field.label_tag }}</span>
+            {{ field }}
+            {% endfor %}
+            <a class="medfont" href="/password_reset/">Forgot Password?</a>
+            <input id="loginButton" type="submit" name="button" value="Login">
+        </div>
+    </form>
+
+    {% endif %}
+
+</section>
+
+{% endblock content %}
