@@ -7,9 +7,8 @@ from blog.forms.blog_forms import CreatePost
 
 
 def index(request):
-    context = {
-        'title': 'Blog'
-    }
+    context = helpers.prepare_context(request)
+    context['title'] = 'Blog'
     posts = Post.objects.all()
     context['posts'] = posts
     return render(request, 'blog/index.html', context=context)

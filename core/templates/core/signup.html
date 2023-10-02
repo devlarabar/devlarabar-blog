@@ -14,6 +14,8 @@
 
     {% else %}
 
+    {% if admin %}
+
     <form method="post">
         {% csrf_token %}
         <div>
@@ -22,9 +24,15 @@
             {{ field }}
             {% endfor %}
             <span>Already have an account? <a class="medfont" href="/login/">Sign in!</a></span>
-            <input id="signupButton" type="submit" name="button" value="Sign Up">
+            <input id="signupButton" type="submit" name="button" value="Sign Up" />
         </div>
     </form>
+
+    {% else %}
+
+    <p>Signups are currently closed.</p>
+
+    {% endif %}
 
     {% endif %}
 

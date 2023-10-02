@@ -6,6 +6,11 @@
 
 <section>
     <p>Hello, world! This is the main blog page.</p>
+    <ul>
+        {% for post in posts %}
+        <li><a href="/blog/viewpost/{{ post.id }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
 </section>
 
 {% endblock content %}

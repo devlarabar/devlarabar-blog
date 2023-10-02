@@ -41,7 +41,15 @@
     <div id="container">
 
         <header>
-            Hello
+            Hello |
+            {% if logged_in %}
+            <form method="POST" action="/logout/">
+                {% csrf_token %}
+                <input type="submit" name="button" value="Logout" />
+            </form>
+            {% else %}
+            <a href="/login/">Login</a>
+            {% endif %}
         </header>
 
         <main>
